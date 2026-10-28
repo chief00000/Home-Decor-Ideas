@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f2eb">
+  <meta name="description" content="Home Decor Ideas — interior inspiration, AI prompt building, and practical room-planning tools.">
+  <title>Home Decor Ideas — Design a Home You Love</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Home Decor Ideas home"><span class="brand-mark">h<span>✳</span></span><span>HOME DECOR <b>IDEAS</b><small>Spaces that feel like you</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">Menu <span>☰</span></button>
+    <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+      <a href="#inspiration">Inspiration</a><a href="#prompt-studio">Prompt Studio</a><a href="#tools">Free Tools</a><a href="#about">About</a>
+      <a class="nav-cta" href="#prompt-studio">Create a prompt <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> YOUR SPACE, REIMAGINED</p>
+        <h1>Make room for<br><em>beautiful living.</em></h1>
+        <p class="hero-lede">Thoughtful inspiration, practical planning tools, and beautifully detailed prompts to help turn your home ideas into a space you love.</p>
+        <div class="hero-actions"><a class="btn btn-dark" href="#inspiration">Explore inspiration <span>↘</span></a><a class="btn btn-outline" href="#prompt-studio">Build an AI prompt</a></div>
+        <div class="hero-note"><span class="tiny-stars">✳ ✳ ✳</span><span>Ideas for every room, every budget, every kind of home.</span></div>
+      </div>
+      <div class="hero-art" aria-label="Interior design inspiration collage">
+        <div class="hero-photo hero-photo-main"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=85" alt="Warm neutral living room with natural textures" fetchpriority="high"></div>
+        <div class="hero-photo hero-photo-small"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="Minimal natural wood and linen interior" loading="lazy"></div>
+        <div class="floating-note"><span class="note-icon">✳</span><div><b>Start with a feeling</b><small>Calm · Warm · Personal</small></div></div>
+        <span class="hero-stamp">THE ART OF<br>FEELING AT HOME</span>
+      </div>
+      <div class="hero-bottom"><span>01 / FIND YOUR STYLE</span><span>INSPIRE · PLAN · CREATE</span><span>EST. FOR YOUR EVERYDAY</span></div>
+    </section>
+
+    <section class="intro-strip">
+      <div class="section-wrap strip-inner"><span class="strip-star">✳</span><p>From the first spark of inspiration to the finishing touch, <b>make confident design decisions</b> with a little help from Home Decor Ideas.</p><a href="#tools">Explore the toolkit <span>→</span></a></div>
+    </section>
+
+    <section class="section-wrap section-pad" id="inspiration">
+      <div class="section-heading"><div><p class="eyebrow">THE IDEA EDIT</p><h2>Find your next <em>favorite room.</em></h2></div><p class="section-sub">Explore rooms, styles, color stories, and small details that make a house feel like home.</p></div>
+      <div class="library-controls">
+        <label class="search-box"><span>⌕</span><input id="designSearch" type="search" placeholder="Search designs, styles, materials…" aria-label="Search design library"></label>
+        <label class="filter-label"><span class="sr-only">Filter category</span><select id="categoryFilter"><option value="all">All categories</option></select></label>
+        <label class="filter-label"><span class="sr-only">Sort designs</span><select id="designSort"><option value="featured">Featured first</option><option value="az">Title A–Z</option><option value="category">Category</option></select></label>
+      </div>
+      <div class="category-chips" id="categoryChips" aria-label="Quick category filters"></div>
+      <div class="design-grid" id="designGrid" aria-live="polite"></div>
+      <div class="library-footer"><p id="libraryCount">Loading ideas…</p><button class="btn btn-outline" id="loadMore">Load more ideas <span>＋</span></button></div>
+    </section>
+
+    <section class="prompt-section" id="prompt-studio">
+      <div class="section-wrap prompt-layout">
+        <div class="prompt-intro"><p class="eyebrow eyebrow-light">THE CREATIVE STUDIO</p><h2>Your idea,<br><em>beautifully described.</em></h2><p>Turn a few choices into a structured English prompt for a compatible AI image generator. Tune the room, palette, materials, atmosphere, and composition, then copy your prompt wherever you create.</p>
+          <div class="prompt-tip"><span>✳</span><div><b>New to prompting?</b><p>Start with a room and a style, then add the colors and materials you love. Specific details help guide the result.</p></div></div>
+          <div class="example-prompts"><span>TRY AN EXAMPLE</span><button type="button" class="example-chip" data-example="warm">Warm modern living room ↗</button><button type="button" class="example-chip" data-example="scandi">Scandinavian bedroom ↗</button><button type="button" class="example-chip" data-example="small">Small apartment refresh ↗</button></div>
+        </div>
+        <form class="prompt-form panel" id="promptForm">
+          <div class="panel-head"><div><span class="step-label">01 — BUILD YOUR SCENE</span><h3>Prompt settings</h3></div><span class="panel-spark">✳</span></div>
+          <label class="field full"><span>Describe your idea *</span><textarea id="idea" rows="3" required placeholder="e.g. A calm, welcoming living room with natural wood and soft linen…"></textarea><small>Write in English for the best results. Be as specific as you like.</small></label>
+          <div class="field-grid">
+            <label class="field"><span>Room or space</span><select id="room"><option>Living room</option><option>Bedroom</option><option>Kitchen</option><option>Bathroom</option><option>Dining room</option><option>Home office</option><option>Entryway</option><option>Studio apartment</option><option>Balcony / terrace</option><option>Garden</option><option>Whole-home exterior</option></select></label>
+            <label class="field"><span>Interior style</span><select id="style"><option>Warm modern</option><option>Scandinavian</option><option>Japandi</option><option>Minimalist</option><option>Mid-century modern</option><option>Modern farmhouse</option><option>Industrial</option><option>Rustic organic</option><option>Traditional elegant</option><option>Coastal</option><option>Art deco</option><option>Eclectic</option><option>Luxury contemporary</option></select></label>
+            <label class="field"><span>Color palette</span><select id="palette"><option>Warm neutrals, cream and sand</option><option>Sage green, ivory and oak</option><option>Terracotta, clay and warm white</option><option>Charcoal, walnut and brass</option><option>Soft blue, white and natural linen</option><option>Olive, beige and dark wood</option><option>Monochrome black and white</option><option>Muted blush, taupe and cream</option><option>Jewel tones with warm neutrals</option><option>Custom palette described below</option></select></label>
+            <label class="field"><span>Approx. room size</span><input id="roomSize" placeholder="e.g. 12 × 14 ft, medium-sized"></label>
+            <label class="field"><span>Furniture & decor</span><input id="furniture" placeholder="e.g. low sofa, sculptural lamp"></label>
+            <label class="field"><span>Wall & floor finishes</span><input id="finishes" placeholder="e.g. limewash walls, oak flooring"></label>
+            <label class="field"><span>Lighting style</span><select id="lighting"><option>Warm layered ambient lighting</option><option>Soft natural daylight</option><option>Statement pendant and accent lights</option><option>Indirect cove lighting</option><option>Dramatic directional lighting</option><option>Bright functional task lighting</option></select></label>
+            <label class="field"><span>Materials & textures</span><input id="materials" placeholder="e.g. linen, oak, travertine, wool"></label>
+            <label class="field"><span>Mood & atmosphere</span><select id="mood"><option>Calm, inviting and lived-in</option><option>Airy, fresh and uncluttered</option><option>Luxurious and sophisticated</option><option>Playful, colorful and expressive</option><option>Quiet, earthy and grounded</option><option>Moody, intimate and dramatic</option></select></label>
+            <label class="field"><span>Camera & composition</span><select id="camera"><option>Wide-angle eye-level interior photograph</option><option>Corner view showing the full room layout</option><option>Architectural editorial composition</option><option>Balanced straight-on composition</option><option>Close-up vignette of materials and decor</option><option>Top-down room layout visualization</option></select></label>
+            <label class="field"><span>Render quality</span><select id="quality"><option>Photorealistic editorial quality</option><option>High-end architectural visualization</option><option>Soft natural lifestyle photography</option><option>Detailed 3D interior render</option><option>Hand-rendered design concept</option></select></label>
+            <label class="field"><span>Realism level</span><select id="realism"><option>Highly realistic, physically plausible</option><option>Stylized but believable</option><option>Conceptual and artistic</option></select></label>
+            <label class="field"><span>Aspect ratio</span><select id="ratio"><option>3:2 landscape</option><option>16:9 wide landscape</option><option>4:5 portrait</option><option>1:1 square</option><option>9:16 vertical</option></select></label>
+          </div>
+          <label class="field full"><span>Additional custom instructions</span><textarea id="custom" rows="2" placeholder="Anything else the image should include or avoid?"></textarea></label>
+          <label class="field full"><span>Negative prompt / unwanted elements</span><input id="negative" value="distorted furniture, impossible architecture, clutter, text, watermark, oversaturated colors" placeholder="e.g. clutter, visible cables, distorted furniture"></label>
+          <div class="form-actions"><button class="btn btn-dark" type="submit">Generate prompt <span>✳</span></button><button class="btn btn-text" type="reset" id="resetPrompt">Reset settings</button></div>
+          <div class="output-wrap" id="promptOutputWrap" hidden><div class="output-heading"><div><span class="step-label">02 — YOUR GENERATED PROMPT</span><h3>Ready to create</h3></div><span class="output-badge">TEMPLATE-BASED</span></div><p class="honesty-note">This tool assembles a prompt locally using your settings. It does not call a live AI model.</p><pre id="promptOutput" tabindex="0"></pre><div class="output-actions"><button type="button" class="btn btn-dark" id="copyPrompt">Copy prompt <span>↗</span></button><button type="button" class="btn btn-outline" id="copyNegative">Copy negative prompt</button><button type="button" class="btn btn-outline" id="regeneratePrompt">Regenerate</button></div></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section-wrap section-pad" id="tools">
+      <div class="section-heading"><div><p class="eyebrow">THE PRACTICAL SIDE</p><h2>Good ideas need <em>good tools.</em></h2></div><p class="section-sub">Useful little helpers for measuring, budgeting, organizing, and making confident design decisions. Estimates are editable and intended for planning.</p></div>
+      <label class="search-box tool-search"><span>⌕</span><input id="toolSearch" type="search" placeholder="Find a tool…" aria-label="Search free tools"></label>
+      <div class="tool-directory" id="toolDirectory"></div>
+    </section>
+
+    <section class="tool-workspace section-wrap" id="toolWorkspace" hidden>
+      <div class="tool-workspace-head"><div><p class="eyebrow">FREE TOOL WORKSPACE</p><h2 id="activeToolTitle">Tool name</h2><p id="activeToolDesc"></p></div><div class="workspace-actions"><button class="btn btn-outline" id="resetTool">Reset tool</button><button class="btn btn-text" id="closeTool">← All tools</button></div></div>
+      <div class="tool-workspace-body"><form id="activeToolForm" class="tool-form panel"></form><div class="tool-result panel" id="activeToolResult"><div class="result-empty"><span>✳</span><h3>Your results will appear here</h3><p>Enter your details and select Calculate or Create to get started.</p></div></div></div>
+    </section>
+
+    <section class="how-section">
+      <div class="section-wrap how-grid"><div><p class="eyebrow">A SIMPLE PLACE TO START</p><h2>From inspiration<br>to <em>your own space.</em></h2><p class="section-sub">You don't need to know all the design language. Start with what you like, then build from there.</p></div>
+        <div class="how-steps"><article><span>01</span><div><h3>Choose a direction</h3><p>Browse rooms and styles. Save a title or copy a prompt that captures the feeling you're after.</p></div></article><article><span>02</span><div><h3>Make it yours</h3><p>Change colors, furniture, materials, dimensions, and mood in the Prompt Studio.</p></div></article><article><span>03</span><div><h3>Copy, create, refine</h3><p>Copy the English prompt into a compatible image generator, then iterate until the concept feels right.</p></div></article></div>
+      </div>
+    </section>
+
+    <section class="section-wrap about-section section-pad" id="about">
+      <div class="about-card"><div class="about-mark">h<span>✳</span></div><div><p class="eyebrow">A NOTE FROM THE CREATOR</p><h2>Good design starts with <em>a feeling.</em></h2><p>Home Decor Ideas is a practical inspiration hub for people who want to shape spaces that feel considered, comfortable, and personal. Explore design directions, write better image prompts, and use simple planning tools to turn ideas into next steps.</p><p class="creator-credit">Created by <b>Chief</b></p></div></div>
+    </section>
+
+    <section class="legal-section section-wrap" id="site-info">
+      <details id="aboutDetails"><summary>About Us</summary><p>Home Decor Ideas offers design inspiration, prompt-building helpers, and practical planning calculators. It is intended for learning and early-stage planning, not as a substitute for professional architectural, engineering, electrical, or construction advice.</p></details>
+      <details><summary>Contact Us</summary><p>Questions or feedback? Email <a href="mailto:chief0000019@gmail.com">chief0000019@gmail.com</a>. This static website opens your email app; it does not submit messages to a server.</p></details>
+      <details><summary>Privacy Policy</summary><p>This version runs its main features in your browser. It does not include an account system or a website-owned analytics backend. Inputs are processed locally; uploaded images used in the comparison tool stay in browser memory for the current page session and are not uploaded by this code. If you use external image URLs or third-party services, those services may collect data under their own policies. Browser clipboard access is used only when you press a copy button. No data is intentionally sent to a Home Decor Ideas server because no such backend is included.</p></details>
+      <details><summary>Terms & Conditions</summary><p>You may use this site for personal inspiration and planning. You are responsible for verifying rights to images and other materials you add, and for checking the accuracy and suitability of any plan before acting on it. Design prompts and generated concepts are not guarantees of real-world results. The site is provided as-is, without a promise of uninterrupted operation or fitness for a specific purpose.</p></details>
+      <details><summary>Disclaimer</summary><p>All quantities, costs, lighting recommendations, and dimensions are estimates based on the inputs and assumptions shown. Verify measurements on site, account for doors, windows, surface conditions, product coverage, local prices, and applicable rules. Consult qualified professionals for structural changes, construction, electrical work, plumbing, and safety-sensitive decisions.</p></details>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="section-wrap footer-main"><a class="brand brand-footer" href="#home"><span class="brand-mark">h<span>✳</span></span><span>HOME DECOR <b>IDEAS</b><small>Spaces that feel like you</small></span></a><p>Inspiration for a home that feels like yours.</p><div class="footer-links"><a href="#inspiration">Inspiration</a><a href="#prompt-studio">Prompt Studio</a><a href="#tools">Free Tools</a><a href="#site-info">Site information</a><a href="mailto:chief0000019@gmail.com">Contact</a></div></div><div class="section-wrap footer-bottom"><span>© <span id="year"></span> Home Decor Ideas</span><span>Created by Chief</span><a href="#home">Back to top ↑</a></div></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
