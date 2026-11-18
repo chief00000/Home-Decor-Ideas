@@ -1,0 +1,41 @@
+{
+  "project": "Home Decor Ideas",
+  "categories": [
+    "Living Room Ideas",
+    "Bedroom Ideas",
+    "Kitchen Ideas",
+    "Bathroom Ideas",
+    "Home Architecture",
+    "Home Decor & Accessories",
+    "Wall Art & Gallery Walls",
+    "Interior Color Palettes",
+    "Small Spaces & Apartments",
+    "Lighting Ideas",
+    "Furniture & Styling",
+    "Outdoor & Garden Design",
+    "Dining Room Ideas",
+    "Home Office Ideas",
+    "Entryway & Hallway Design",
+    "Kids' Room Ideas",
+    "Luxury Interior Design",
+    "Minimalist Home Design",
+    "Scandinavian Interior Design",
+    "Modern Farmhouse Design",
+    "Rustic & Industrial Interiors",
+    "Ceiling & Wall Design",
+    "Storage & Organization Ideas",
+    "Balcony & Terrace Design",
+    "Home Makeover & Renovation Ideas"
+  ],
+  "starter_design_count": 174,
+  "target_per_category": 150,
+  "target_total": 3750,
+  "status": "starter-library; not complete",
+  "breakdown": {
+    "authored_curated_records": 28,
+    "category_seed_records": 146,
+    "category_count": 25,
+    "unique_unsplash_photo_ids_in_source": 12
+  },
+  "note": "The count is based on the current curated and categorySeeds/genericSeeds arrays in script.js. Design records are not all individually authored, and the same 12 Unsplash photo IDs are reused. Add individually reviewed designs and licensed image assets before claiming the 3,750-design target."
+}
